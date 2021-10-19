@@ -48,7 +48,7 @@ CREATE TABLE cart
 (
   cart_id INT NOT NULL,
   no_of_products INT NOT NULL,
-  -- delivery_date DATE NOT NULL,
+  -- delivery_date DATE NOT NULL DEFAULT CURRENT_DATE+INTERVAL'1 day',
   total_amount FLOAT NOT NULL,
   PRIMARY KEY (cart_id),
   FOREIGN KEY (cart_id) REFERENCES customer(customer_id)
@@ -103,6 +103,7 @@ $$
 BEGIN
   UPDATE cart set no_of_products=no_of_products+1 where new.cart_id=cart.cart_id;
   UPDATE cart set total_amount=total_amount+(select price from product where new.p_id = product.p_id) where new.cart_id=cart.cart_id;
+  -- UPDATE cart set delivery_date=delivery_date+INTERVAL'1 day' where cart.cart_id=new.cart_id;
     RETURN new;
 END;
 $$
@@ -117,7 +118,7 @@ CREATE TRIGGER increment_cart
 CREATE OR REPLACE FUNCTION insert_cart() RETURNS TRIGGER AS 
 $$
 BEGIN
-INSERT INTO CART VALUES (new.customer_id,0,0);
+INSERT INTO CART(cart_id,no_of_products,total_amount) VALUES (new.customer_id,0,0);
 RETURN NEW;
 END;
 $$
