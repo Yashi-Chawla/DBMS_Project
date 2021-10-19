@@ -11,6 +11,8 @@ CREATE TABLE customer
   email_id VARCHAR(50) NOT NULL,
   phone_no char(10) NOT NULL,
   dob DATE NOT NULL,
+  billing_address VARCHAR(200) NOT NULL,
+  shipping_address VARCHAR(200) NOT NULL,
   PRIMARY KEY (customer_id)
 );
 
@@ -46,13 +48,10 @@ CREATE TABLE cart
 (
   cart_id INT NOT NULL,
   no_of_products INT NOT NULL,
-  billing_address VARCHAR(200) NOT NULL,
-  shipping_address VARCHAR(200) NOT NULL,
-  delivery_date DATE NOT NULL,
+  -- delivery_date DATE NOT NULL,
   total_amount FLOAT NOT NULL,
-  customer_id INT NOT NULL,
   PRIMARY KEY (cart_id),
-  FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+  FOREIGN KEY (cart_id) REFERENCES customer(customer_id)
 );
 
 CREATE TABLE sold_by
@@ -96,7 +95,9 @@ CREATE TABLE customer_order
 -- Triggers to make
 --1. insert into order table(cart_id, p_id, should reflect in total amount of that cart_id in table cart, and increment of no of products)
 --2. delete from order table 1. total amount-that product price, 2. number of products decrement
+--3. insert into user. inserts a row into cart(default)
 
+-- Trigger 1
 CREATE OR REPLACE FUNCTION increment() RETURNS TRIGGER AS
 $$
 BEGIN
@@ -111,5 +112,19 @@ CREATE TRIGGER increment_cart
      AFTER INSERT ON customer_order
      FOR EACH ROW
      EXECUTE PROCEDURE increment();
+    
+--Trigger 3 (cart-id, no_of_products,total_amount)
+CREATE OR REPLACE FUNCTION insert_cart() RETURNS TRIGGER AS 
+$$
+BEGIN
+INSERT INTO CART VALUES (new.customer_id,0,0);
+RETURN NEW;
+END;
+$$
+language plpgsql;
 
+CREATE TRIGGER insert_cart_trigger
+AFTER INSERT ON customer
+FOR EACH ROW 
+EXECUTE PROCEDURE insert_cart();
 

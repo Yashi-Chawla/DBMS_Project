@@ -1,16 +1,25 @@
 \c shopping
-insert into customer values (1, 'Hermine Jacmar', 'Z9gtubmni', 'hjacmar0@ucla.edu', '4265173388', '2003-11-03');
-insert into customer values (2, 'Verna Hadgraft', 'JfZG6a5', 'vhadgraft1@huffingtonpost.com', '1178089989', '2004-12-09');
-insert into customer values (3, 'Linell Wederell', 'gcNFlaqOe', 'lwederell2@cornell.edu', '4782533085', '1998-02-3');
-insert into customer values (4, 'Catlin Filchagin', '2zyyz4G', 'cfilchagin3@twitpic.com', '7692341640', '2004-05-06');
-insert into customer values (5, 'Richie Mangeot', 'z1cZAQEV', 'rmangeot4@google.pl', '3971658219', '1998-10-7');
-insert into customer values (6, 'Vickie Hellis', 'XaOkEg7OhLR', 'vhellis5@pen.io', '6474674901', '1996-10-25');
-insert into customer values (7, 'Rafael Janecki', 'bcbRcv7yKzRy', 'rjanecki6@cdbaby.com', '5266682866', '1996-09-02');
-insert into customer values (8, 'Sinclare Morena', 'SdzO5khw5', 'smorena7@miitbeian.gov.cn', '7218601087', '2001-08-29');
-insert into customer values (9, 'Ragnar Abrahamian', 'lQoLB9x', 'rabrahamian8@ox.ac.uk', '4413363314', '2002-08-17');
-insert into customer values (10, 'Mohandas O'' Byrne', 'MRZyqfNELA', 'mo9@ehow.com', '3818990634', '2003-11-17');
+-- insert into customer values (1, 'Hermine Jacmar', 'Z9gtubmni', 'hjacmar0@ucla.edu', '4265173388', '2003-11-03');
+-- insert into customer values (2, 'Verna Hadgraft', 'JfZG6a5', 'vhadgraft1@huffingtonpost.com', '1178089989', '2004-12-09');
+-- insert into customer values (3, 'Linell Wederell', 'gcNFlaqOe', 'lwederell2@cornell.edu', '4782533085', '1998-02-3');
+-- insert into customer values (4, 'Catlin Filchagin', '2zyyz4G', 'cfilchagin3@twitpic.com', '7692341640', '2004-05-06');
+-- insert into customer values (5, 'Richie Mangeot', 'z1cZAQEV', 'rmangeot4@google.pl', '3971658219', '1998-10-7');
+-- insert into customer values (6, 'Vickie Hellis', 'XaOkEg7OhLR', 'vhellis5@pen.io', '6474674901', '1996-10-25');
+-- insert into customer values (7, 'Rafael Janecki', 'bcbRcv7yKzRy', 'rjanecki6@cdbaby.com', '5266682866', '1996-09-02');
+-- insert into customer values (8, 'Sinclare Morena', 'SdzO5khw5', 'smorena7@miitbeian.gov.cn', '7218601087', '2001-08-29');
+-- insert into customer values (9, 'Ragnar Abrahamian', 'lQoLB9x', 'rabrahamian8@ox.ac.uk', '4413363314', '2002-08-17');
+-- insert into customer values (10, 'Mohandas O'' Byrne', 'MRZyqfNELA', 'mo9@ehow.com', '3818990634', '2003-11-17');
 
-
+insert into customer values (1, 'Taddeo Aldersea', 'YhxiNqYCs', 'taldersea0@noaa.gov', '6007773273', '1994-07-11', '81308 Grayhawk Avenue', '52 Kropf Road');
+insert into customer values (2, 'Carleton Sekulla', 'jVlFJuBErZ', 'csekulla1@phpbb.com', '8082495533', '1996-10-09', '791 Farmco Terrace', '88 Oakridge Parkway');
+insert into customer values (3, 'Correy McConville', 'fvy8LF', 'cmcconville2@nature.com', '5246283383', '1998-01-05', '54 Di Loreto Plaza', '270 Bartillon Way');
+insert into customer values (4, 'Flss Dongate', '1C500k7Of5j', 'fdongate3@china.com.cn', '5054492575', '1996-07-16', '02819 Heffernan Court', '79 Twin Pines Place');
+insert into customer values (5, 'Broderick Preston', 'M7oUQw7O6eMb', 'bpreston4@rambler.ru', '4819256685', '1997-10-15', '447 Dennis Alley', '7 Westridge Plaza');
+insert into customer values (6, 'Vina Hammer', 'T4cgPDs', 'vhammer5@utexas.edu', '5169715969', '2001-07-22', '91111 Pleasure Point', '28 Amoth Avenue');
+insert into customer values (7, 'Catha Natwick', 'ylWekF9uMcW', 'cnatwick6@nationalgeographic.com', '3167215176', '2003-04-13', '34 Waubesa Parkway', '71397 Morningstar Road');
+insert into customer values (8, 'Miguelita Aspling', 'shl9bOz74', 'maspling7@house.gov', '2373430425', '1997-09-24', '925 Chive Road', '418 Victoria Center');
+insert into customer values (9, 'Gwenette Rove', 'xZ5T6WD', 'grove8@privacy.gov.au', '8833436581', '1997-09-24', '12 Dakota Lane', '96877 Scofield Center');
+insert into customer values (10, 'Randell McArley', 'ruwr6R', 'rmcarley9@java.com', '9652444117', '1997-05-25', '9 Hollow Ridge Crossing', '0 Prentice Hill');
 
 insert into transaction values ('89-295-3455', 0, 'credit card', 1);
 insert into transaction values ('50-800-7145', 0, 'cash', 2);
@@ -44,17 +53,6 @@ insert into product values (7, 'Valeda Donson', 'Integer ac neque.', 1568, 7);
 insert into product values (8, 'Patricia Alyutin', 'Morbi porttitor lorem id ligula.', 3906, 8);
 insert into product values (9, 'Luelle Danilin', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis.', 1056, 9);
 insert into product values (10, 'Cullan Hardwidge', 'Nam nulla.', 4604, 10);
-
-insert into cart values (1, 0, '56485 Corben Plaza', '91 Logan Park', '2021-08-03',0,10);
-insert into cart values (2, 0, '995 Loomis Road', '3 Welch Point', '2021-09-22',0,9);
-insert into cart values (3, 0, '702 Schiller Center', '633 Red Cloud Hill', '2021-01-21',0,8);
-insert into cart values (4, 0, '31 Jenna Lane', '13 Ronald Regan Plaza', '2021-03-21',0,7);
-insert into cart values (5, 0, '55487 Blaine Drive', '34355 Golf Parkway', '2021-09-24',0,6);
-insert into cart values (6, 0, '34 Ronald Regan Trail', '88831 Commercial Trail', '2021-06-28',0,5);
-insert into cart values (7, 0, '3 Prairieview Point', '5719 American Drive', '2021-01-23',0,4);
-insert into cart values (8, 0, '76058 Di Loreto Terrace', '5 Monterey Circle', '2021-09-12',0,3);
-insert into cart values (9, 0, '0 Gulseth Center', '3 Knutson Court', '2021-10-18',0,2);
-insert into cart values (10,0, '41515 Lighthouse Bay Street', '0534 Lawn Trail', '2021-05-29',0,1);
 
 insert into customer_order values (1, 8);
 insert into customer_order values (1, 6);
