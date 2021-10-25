@@ -129,3 +129,18 @@ AFTER INSERT ON customer
 FOR EACH ROW 
 EXECUTE PROCEDURE insert_cart();
 
+CREATE OR REPLACE FUNCTION decrement() RETURNS TRIGGER AS
+$$
+BEGIN
+  UPDATE cart set no_of_products=no_of_products-1 where new.cart_id=cart.cart_id;
+  UPDATE cart set total_amount=total_amount-(select price from product where new.p_id = product.p_id) where new.cart_id=cart.cart_id;
+    RETURN new;
+END;
+$$
+language plpgsql;
+
+CREATE TRIGGER decrement_cart
+    AFTER DELETE ON customer_order
+    FOR EACH ROW
+    EXECUTE PROCEDURE decrement();
+
