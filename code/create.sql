@@ -103,6 +103,7 @@ $$
 BEGIN
   UPDATE cart set no_of_products=no_of_products+1 where new.cart_id=cart.cart_id;
   UPDATE cart set total_amount=total_amount+(select price from product where new.p_id = product.p_id) where new.cart_id=cart.cart_id;
+  UPDATE transaction set amount=(select total_amount from cart where new.cart_id=cart.cart_id) where new.cart_id=transaction.customer_id;
   -- UPDATE cart set delivery_date=delivery_date+INTERVAL'1 day' where cart.cart_id=new.cart_id;
     RETURN new;
 END;

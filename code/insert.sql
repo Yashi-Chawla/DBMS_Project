@@ -1,25 +1,15 @@
 \c shopping
-insert into customer values (1, 'Hermine Jacmar', 'Z9gtubmni', 'hjacmar0@ucla.edu', '4265173388', '2003-11-03');
-insert into customer values (2, 'Verna Hadgraft', 'JfZG6a5', 'vhadgraft1@huffingtonpost.com', '1178089989', '2004-12-09');
-insert into customer values (3, 'Linell Wederell', 'gcNFlaqOe', 'lwederell2@cornell.edu', '4782533085', '1998-02-3');
-insert into customer values (4, 'Catlin Filchagin', '2zyyz4G', 'cfilchagin3@twitpic.com', '7692341640', '2004-05-06');
-insert into customer values (5, 'Richie Mangeot', 'z1cZAQEV', 'rmangeot4@google.pl', '3971658219', '1998-10-7');
-insert into customer values (6, 'Vickie Hellis', 'XaOkEg7OhLR', 'vhellis5@pen.io', '6474674901', '1996-10-25');
-insert into customer values (7, 'Rafael Janecki', 'bcbRcv7yKzRy', 'rjanecki6@cdbaby.com', '5266682866', '1996-09-02');
-insert into customer values (8, 'Sinclare Morena', 'SdzO5khw5', 'smorena7@miitbeian.gov.cn', '7218601087', '2001-08-29');
-insert into customer values (9, 'Ragnar Abrahamian', 'lQoLB9x', 'rabrahamian8@ox.ac.uk', '4413363314', '2002-08-17');
-insert into customer values (10, 'Mohandas O'' Byrne', 'MRZyqfNELA', 'mo9@ehow.com', '3818990634', '2003-11-17');
 
-insert into cart values (1, 5, '56485 Corben Plaza', '91 Logan Park', '2021-08-03',0,10);
-insert into cart values (2, 1, '995 Loomis Road', '3 Welch Point', '2021-09-22',0,9);
-insert into cart values (3, 1, '702 Schiller Center', '633 Red Cloud Hill', '2021-01-21',0,8);
-insert into cart values (4, 3, '31 Jenna Lane', '13 Ronald Regan Plaza', '2021-03-21',0,7);
-insert into cart values (5, 1, '55487 Blaine Drive', '34355 Golf Parkway', '2021-09-24',0,6);
-insert into cart values (6, 3, '34 Ronald Regan Trail', '88831 Commercial Trail', '2021-06-28',0,5);
-insert into cart values (7, 4, '3 Prairieview Point', '5719 American Drive', '2021-01-23',0,4);
-insert into cart values (8, 3, '76058 Di Loreto Terrace', '5 Monterey Circle', '2021-09-12',0,3);
-insert into cart values (9, 1, '0 Gulseth Center', '3 Knutson Court', '2021-10-18',0,2);
-insert into cart values (10, 3, '41515 Lighthouse Bay Street', '0534 Lawn Trail', '2021-05-29',0,1);
+insert into customer values (1, 'Taddeo Aldersea', 'YhxiNqYCs', 'taldersea0@noaa.gov', '6007773273', '1994-07-11', '81308 Grayhawk Avenue', '52 Kropf Road');
+insert into customer values (2, 'Carleton Sekulla', 'jVlFJuBErZ', 'csekulla1@phpbb.com', '8082495533', '1996-10-09', '791 Farmco Terrace', '88 Oakridge Parkway');
+insert into customer values (3, 'Correy McConville', 'fvy8LF', 'cmcconville2@nature.com', '5246283383', '1998-01-05', '54 Di Loreto Plaza', '270 Bartillon Way');
+insert into customer values (4, 'Flss Dongate', '1C500k7Of5j', 'fdongate3@china.com.cn', '5054492575', '1996-07-16', '02819 Heffernan Court', '79 Twin Pines Place');
+insert into customer values (5, 'Broderick Preston', 'M7oUQw7O6eMb', 'bpreston4@rambler.ru', '4819256685', '1997-10-15', '447 Dennis Alley', '7 Westridge Plaza');
+insert into customer values (6, 'Vina Hammer', 'T4cgPDs', 'vhammer5@utexas.edu', '5169715969', '2001-07-22', '91111 Pleasure Point', '28 Amoth Avenue');
+insert into customer values (7, 'Catha Natwick', 'ylWekF9uMcW', 'cnatwick6@nationalgeographic.com', '3167215176', '2003-04-13', '34 Waubesa Parkway', '71397 Morningstar Road');
+insert into customer values (8, 'Miguelita Aspling', 'shl9bOz74', 'maspling7@house.gov', '2373430425', '1997-09-24', '925 Chive Road', '418 Victoria Center');
+insert into customer values (9, 'Gwenette Rove', 'xZ5T6WD', 'grove8@privacy.gov.au', '8833436581', '1997-09-24', '12 Dakota Lane', '96877 Scofield Center');
+insert into customer values (10, 'Randell McArley', 'ruwr6R', 'rmcarley9@java.com', '9652444117', '1997-05-25', '9 Hollow Ridge Crossing', '0 Prentice Hill');
 
 insert into transaction values ('89-295-3455', 0, 'credit card', 1);
 insert into transaction values ('50-800-7145', 0, 'cash', 2);
@@ -99,6 +89,13 @@ insert into review values ('2021-01-25', 5, 'Aliquam sit amet diam in magna bibe
 insert into review values ('2021-06-10', 5, 'Vivamus vestibulum sagittis sapien.', 8, 3);
 insert into review values ('2020-05-16', 4, 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.', 9, 2);
 insert into review values ('2021-05-27', 5, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', 10, 1);
+insert into review values ('2021-05-28', 4, 'test1', 1, 1);
+insert into review values ('2021-05-29', 4, 'test2', 9, 1);
+insert into review values ('2021-05-30', 2, 'test3', 7, 1);
+insert into review values ('2021-05-01', 3, 'test4', 4, 1);
+
+
+
 
 insert into supplier values (1, 'Charles Pople', 'http://mit.edu', '6976573751', 'cpople0@europa.eu');
 insert into supplier values (2, 'Tadeas McIver', 'https://archive.org', '9088550777', 'tmciver1@ted.com');
@@ -121,10 +118,3 @@ insert into sold_by (brand_id, s_id) values (7, 4);
 insert into sold_by (brand_id, s_id) values (8, 3);
 insert into sold_by (brand_id, s_id) values (9, 2);
 insert into sold_by (brand_id, s_id) values (10, 1);
-
-create table ind as select cart_id,customer_order.p_id,product.price from customer_order inner join product on product.p_id=customer_order.p_id;
-
-create table ind2 as select cart_id,sum(price) from ind GROUP BY cart_id;
-update cart set total_amount=ind2.sum from ind2 where cart.cart_id=ind2.cart_id; 
-select * from cart;
-
