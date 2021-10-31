@@ -23,5 +23,3 @@ grant all on cart to admin;
 grant all on sold_by to admin;
 grant select on customer to admin;
 grant select on review to admin;
-
-grant yashi to customer;
