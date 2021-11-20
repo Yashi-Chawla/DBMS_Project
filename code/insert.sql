@@ -94,9 +94,6 @@ insert into review values ('2021-05-29', 4, 'test2', 9, 1);
 insert into review values ('2021-05-30', 2, 'test3', 7, 1);
 insert into review values ('2021-05-01', 3, 'test4', 4, 1);
 
-
-
-
 insert into supplier values (1, 'Charles Pople', 'http://mit.edu', '6976573751', 'cpople0@europa.eu');
 insert into supplier values (2, 'Tadeas McIver', 'https://archive.org', '9088550777', 'tmciver1@ted.com');
 insert into supplier values (3, 'Merissa Rasmus', 'https://vkontakte.ru', '1088374509', 'mrasmus2@ezinearticles.com');

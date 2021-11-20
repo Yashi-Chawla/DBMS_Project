@@ -8,7 +8,7 @@ CREATE TABLE customer
   customer_id INT NOT NULL,
   name VARCHAR(50) NOT NULL,
   password VARCHAR(50) NOT NULL,
-  email_id VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
   phone_no char(10) NOT NULL,
   dob DATE NOT NULL,
   billing_address VARCHAR(200) NOT NULL,
@@ -117,8 +117,8 @@ CREATE TRIGGER increment_cart
 CREATE OR REPLACE FUNCTION decrement() RETURNS TRIGGER AS
 $$
 BEGIN
-  UPDATE cart set no_of_products=no_of_products-1 where new.cart_id=cart.cart_id;
-  UPDATE cart set total_amount=total_amount-(select price from product where new.p_id = product.p_id) where new.cart_id=cart.cart_id;
+  UPDATE cart set no_of_products=no_of_products-1 where old.cart_id=cart.cart_id;
+  UPDATE cart set total_amount=total_amount-(select price from product where old.p_id = product.p_id) where old.cart_id=cart.cart_id;
     RETURN new;
 END;
 $$
