@@ -119,6 +119,7 @@ $$
 BEGIN
   UPDATE cart set no_of_products=no_of_products-1 where old.cart_id=cart.cart_id;
   UPDATE cart set total_amount=total_amount-(select price from product where old.p_id = product.p_id) where old.cart_id=cart.cart_id;
+  UPDATE transaction set amount=(select total_amount from cart where old.cart_id=cart.cart_id) where old.cart_id=transaction.customer_id;
     RETURN new;
 END;
 $$
