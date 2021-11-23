@@ -1,6 +1,4 @@
-\c shopping
-
-insert into customer values (0,'Test','test','test@test.com','8082495533','1994-07-11','81308 Grayhawk Avenue', '52 Kropf Road');
+insert into customer values (0,'Test','test','test@test.com','8082495533','1994-07-11','81308 Grayhawk Avenue', '52 Kropf Road')
 insert into customer values (1, 'Taddeo Aldersea', 'YhxiNqYCs', 'taldersea0@noaa.gov', '6007773273', '1994-07-11', '81308 Grayhawk Avenue', '52 Kropf Road');
 insert into customer values (2, 'Carleton Sekulla', 'jVlFJuBErZ', 'csekulla1@phpbb.com', '8082495533', '1996-10-09', '791 Farmco Terrace', '88 Oakridge Parkway');
 insert into customer values (3, 'Correy McConville', 'fvy8LF', 'cmcconville2@nature.com', '5246283383', '1998-01-05', '54 Di Loreto Plaza', '270 Bartillon Way');
@@ -47,8 +45,8 @@ insert into product values (10, 'Cullan Hardwidge', 'Nam nulla.', 4604, 10);
 
 insert into customer_order values (1, 8);
 insert into customer_order values (1, 6);
-insert into customer_order values (1, 10);
 insert into customer_order values (1, 5);
+insert into customer_order values (1, 10);
 
 insert into customer_order values (2, 3);
 
